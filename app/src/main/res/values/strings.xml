@@ -3,4 +3,6 @@
 
     <string name="iv_avatar_description">Avatar</string>
     <string name="bt_save">Save</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

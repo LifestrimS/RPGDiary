@@ -11,7 +11,6 @@ import java.util.*
 
 
 class TaskAdapter: RecyclerView.Adapter<TaskViewHolder>() {
-//class TaskAdapter : ListAdapter<EntityTask, TaskViewHolder>() {
 
     private var tasks = emptyList<EntityTask>()
 
@@ -40,11 +39,8 @@ class TaskViewHolder(private val view: View) :RecyclerView.ViewHolder(view) {
     fun bind(item: EntityTask) {
         this.task = item
 
-        val calendar: Calendar = Calendar.getInstance()
-        val date = "${calendar.get(Calendar.DAY_OF_MONTH)}.${calendar.get(Calendar.MONTH)+1}"
-
         view.tv_task_title.text = task.taskTitle
-        view.tv_task_time.text = date
+        view.tv_task_time.text = task.taskDescription
     }
 
 }

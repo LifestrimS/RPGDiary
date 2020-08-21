@@ -1,4 +1,4 @@
-package com.lifestrim.rpgdiary.navigation
+package com.lifestrim.rpgdiary.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,13 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lifestrim.rpgdiary.R
-import com.lifestrim.rpgdiary.data.task.EntityTask
 import com.lifestrim.rpgdiary.data.task.TaskAdapter
 import com.lifestrim.rpgdiary.data.task.TaskViewModel
 import kotlinx.android.synthetic.main.fragment_main.view.*
-import java.util.*
 
 
 /**
@@ -31,6 +30,7 @@ class MainFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_main, container, false)
         setupRecyclerView(view)
         setupObservers()
+        setupFab(view)
         return view
     }
 
@@ -43,16 +43,22 @@ class MainFragment : Fragment() {
     private fun setupObservers() {
         taskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
 
-        for (n in 0..10) {
+        /*for (n in 0..10) {
             val testTasks: EntityTask = EntityTask(n.toLong(), "Title", "Description")
             taskViewModel.insertTask(testTasks)
-        }
+        }*/
 
         taskViewModel.allTasks.observe(viewLifecycleOwner, Observer { tasks ->
             tasks?.let {
                 taskAdapter.setItems(it)
             }
         })
+    }
+
+    private fun setupFab(view: View) {
+        view.fab.setOnClickListener {
+            it.findNavController().navigate(R.id.action_mainFragment_to_addTaskFragment)
+        }
     }
 
 }

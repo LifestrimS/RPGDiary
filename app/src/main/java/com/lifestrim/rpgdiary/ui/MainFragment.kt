@@ -43,11 +43,6 @@ class MainFragment : Fragment() {
     private fun setupObservers() {
         taskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
 
-        /*for (n in 0..10) {
-            val testTasks: EntityTask = EntityTask(n.toLong(), "Title", "Description")
-            taskViewModel.insertTask(testTasks)
-        }*/
-
         taskViewModel.allTasks.observe(viewLifecycleOwner, Observer { tasks ->
             tasks?.let {
                 taskAdapter.setItems(it)

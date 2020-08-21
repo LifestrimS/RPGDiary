@@ -5,34 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/imageButton"
+    <ImageView
+        android:id="@+id/iv_task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_image_for_imagebutton" />
+        android:src="@drawable/ic_image_for_imagebutton"/>
 
     <EditText
         android:id="@+id/et_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/small_margin"
-        android:inputType="textPersonName"
+        android:layout_margin="@dimen/margin_small"
+        android:inputType="textAutoComplete|textCapWords"
+        android:singleLine="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageButton"
+        app:layout_constraintStart_toEndOf="@id/iv_task"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Title" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/et_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/small_margin"
-        android:inputType="textPersonName"
+        android:layout_margin="@dimen/margin_small"
+        android:inputType="textAutoComplete|textCapWords"
+        android:linksClickable="true"
+        android:singleLine="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageButton"
+        app:layout_constraintStart_toEndOf="@id/iv_task"
         app:layout_constraintTop_toBottomOf="@id/et_title"
         tools:text="Description" />
 
@@ -40,9 +43,9 @@
         android:id="@+id/bt_save"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
         android:text="@string/bt_save"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="@dimen/margin"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

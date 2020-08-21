@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">RPGDiary</string>
+
+    <string name="iv_avatar_description">Avatar</string>
+    <string name="bt_save">Save</string>
+</resources>

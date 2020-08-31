@@ -3,6 +3,25 @@
 
     <string name="iv_avatar_description">Avatar</string>
     <string name="bt_save">Save</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notification_channel_description">Tasks channel</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+    <string name="time_date_dialog_title">Date and time for task</string>
+    <string name="hint_task_description">Task description</string>
+    <string name="hint_task_title">Task title</string>
+    <string name="task_description">Task description</string>
+    <string name="task_image">Task image</string>
+
+    <string name="name">Name:</string>
+    <string name="level">Lvl:</string>
+    <string name="experience">Exp:</string>
+    <string name="date">Date:</string>
+    <string name="time">Time:</string>
+    <string name="set_notification">Set notification</string>
+    <string name="need_fill_all_fields">You need fill all fields!</string>
+    <string name="hint_name">Name</string>
+
+
+    <string name="test_text">Test</string>
 </resources>

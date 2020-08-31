@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.lifestrim.rpgdiary.R
+import com.lifestrim.rpgdiary.util.DateConverter
 import kotlinx.android.synthetic.main.rv_item.view.*
 import java.util.*
 
@@ -40,7 +41,8 @@ class TaskViewHolder(private val view: View) :RecyclerView.ViewHolder(view) {
         this.task = item
 
         view.tv_task_title.text = task.taskTitle
-        view.tv_task_time.text = task.taskDescription
+        view.tv_task_time.text = DateConverter().getDayMonthHoursMinute(task.taskCreatedTime)
+        view.tv_task_description.text = task.taskDescription
     }
 
 }

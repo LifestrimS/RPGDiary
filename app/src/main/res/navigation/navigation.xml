@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_addTaskFragment"
             app:destination="@id/addTaskFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addCharacterFragment"
+            app:destination="@id/addCharacterFragment" />
     </fragment>
     <fragment
         android:id="@+id/addTaskFragment"
@@ -20,6 +23,15 @@
         android:label="AddTaskFragment" >
         <action
             android:id="@+id/action_addTaskFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCharacterFragment"
+        android:name="com.lifestrim.rpgdiary.ui.AddCharacterFragment"
+        android:label="fragment_add_character"
+        tools:layout="@layout/fragment_add_character" >
+        <action
+            android:id="@+id/action_addCharacterFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
 </navigation>
